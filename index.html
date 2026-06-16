@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1 - HTML Mini Project</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: sans-serif; background-color: #f5f5f5; padding: 20px; color: #333; }
+        .container { max-width: 800px; margin: 0 auto; background: #fff; border: 2px solid #000; }
+        header { background: #2c3e50; color: #fff; text-align: center; padding: 20px; border-bottom: 2px solid #000; }
+        nav { background: #34495e; padding: 10px; border-bottom: 2px solid #000; text-align: center; }
+        nav a { color: #fff; text-decoration: none; padding: 5px 15px; font-weight: bold; }
+        nav a:hover { color: #1abc9c; }
+        main { padding: 30px 20px; border-bottom: 2px solid #000; text-align: center; }
+        .image-box { max-width: 400px; height: 200px; margin: 15px auto; border: 2px solid #555; background: #eee; position: relative; display: flex; align-items: center; justify-content: center; color: #777; }
+        .image-box::before, .image-box::after { content: ""; position: absolute; width: 100%; height: 1px; background: #aaa; top: 50%; left: 0; }
+        .image-box::before { transform: rotate(26deg); }
+        .image-box::after { transform: rotate(-26deg); }
+        .image-box span { position: relative; z-index: 1; background: #eee; padding: 2px 10px; }
+        section { background: #fafafa; padding: 30px 20px; border-bottom: 2px solid #000; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; }
+        button { background: #e67e22; color: #fff; padding: 10px 20px; border: none; cursor: pointer; font-weight: bold; width: 100%; }
+        button:hover { background: #d35400; }
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 15px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>HEADER SECTION</h1>
+        </header>
+
+        <nav>
+            <a href="#">TRANG CHỦ</a>
+            <a href="#">SẢN PHẨM</a>
+            <a href="#">LIÊN HỆ</a>
+        </nav>
+
+        <main>
+            <h2>MAIN CONTENT</h2>
+            <div class="image-box">
+                <span>IMAGE PLACEHOLDER</span>
+            </div>
+        </main>
+
+        <section>
+            <h3 style="margin-bottom: 15px; text-align: center;">FORM SECTION</h3>
+            <form action="#" method="POST" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                    <label for="username">Họ và tên:</label>
+                    <input type="text" id="username" placeholder="Nhập tên của bạn">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Nhập email">
+                </div>
+                <div class="form-group">
+                    <label for="content">Nội dung:</label>
+                    <textarea id="content" rows="3" placeholder="Nhập tin nhắn..."></textarea>
+                </div>
+                <button type="submit">GỬI FORM</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>FOOTER SECTION &copy; 2026</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

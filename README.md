@@ -1,1 +1,0 @@
-# ktra-miniproject-1
